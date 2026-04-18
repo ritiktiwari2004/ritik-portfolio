@@ -1,142 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ritik Tiwari Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ritik Tiwari | FAANG-Level Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-    body {
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      color: white;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(90deg, #4da6ff, #00ffd5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border-radius: 25px;
-      border: none;
-      background: linear-gradient(90deg, #4da6ff, #00ffd5);
-      color: black;
-      cursor: pointer;
-    }
-
-    section { padding: 80px 20px; max-width: 1000px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 40px; }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px 0;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px rgba(77,166,255,0.3);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .project-links a {
-      display: inline-block;
-      margin-right: 15px;
-      margin-top: 10px;
-      padding: 8px 15px;
-      border-radius: 20px;
-      background: #222;
-      text-decoration: none;
-      color: #4da6ff;
-      font-size: 0.9rem;
-    }
-
-    .project-links a:hover {
-      background: #4da6ff;
-      color: black;
-    }
-
-    footer { text-align: center; padding: 20px; background: #000; color: #aaa; }
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0a0a;color:#fff;scroll-behavior:smooth}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);z-index:1000;padding:10px}
+nav a{color:#ccc;margin:0 15px;text-decoration:none}
+nav a:hover{color:#00ffd5}
+header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+h1{font-size:3.5rem;background:linear-gradient(90deg,#4da6ff,#00ffd5);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.typing{border-right:2px solid #00ffd5;white-space:nowrap;overflow:hidden}
+section{padding:90px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;margin-bottom:40px}
+.card{background:rgba(255,255,255,0.05);padding:25px;border-radius:15px;margin:20px 0;transition:.4s}
+.card:hover{transform:translateY(-10px);box-shadow:0 0 25px #00ffd5}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px}
+.skill{background:#111;padding:12px;border-radius:20px;text-align:center}
+footer{text-align:center;padding:20px;background:#000;color:#aaa}
+.btn{padding:10px 20px;border-radius:20px;background:linear-gradient(90deg,#4da6ff,#00ffd5);border:none;color:#000;cursor:pointer;margin-top:20px}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1 data-aos="fade-up">Ritik Tiwari</h1>
-  <p data-aos="fade-up" data-aos-delay="200">Aspiring Data Analyst & ML Enthusiast</p>
-  <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+<h1 data-aos="fade-up">Ritik Tiwari</h1>
+<p class="typing" id="typing"></p>
+<button class="btn" onclick="document.getElementById('projects').scrollIntoView()">View Work</button>
 </header>
 
+<section id="about" data-aos="fade-up">
+<h2>About Me</h2>
+<p>I am an aspiring Data Analyst and Machine Learning Engineer with strong skills in Python, SQL, and data visualization. I specialize in building end-to-end ML pipelines, performing exploratory data analysis, and delivering data-driven insights to solve real-world problems.</p>
+</section>
+
+<section id="skills" data-aos="fade-up">
+<h2>Technical Skills</h2>
+<div class="skills">
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">Pandas</div>
+<div class="skill">NumPy</div>
+<div class="skill">Scikit-learn</div>
+<div class="skill">Matplotlib</div>
+<div class="skill">Power BI</div>
+<div class="skill">EDA</div>
+<div class="skill">Feature Engineering</div>
+<div class="skill">Statistics</div>
+</div>
+</section>
+
+<section id="experience" data-aos="fade-up">
+<h2>Experience</h2>
+<div class="card">
+<h3>Tata Group Data Analytics Job Simulation (Forage)</h3>
+<p><b>Duration:</b> Sept 2025 - Oct 2025</p>
+<ul>
+<li>Conducted exploratory data analysis using GenAI tools to assess data quality and risk indicators.</li>
+<li>Developed predictive modeling framework for customer delinquency risk.</li>
+<li>Designed AI-driven collection strategy with automation and ethical AI considerations.</li>
+<li>Worked on real-world financial data simulation and analytics strategy.</li>
+</ul>
+</div>
+</section>
+
 <section id="projects">
-  <h2 data-aos="fade-up">Projects</h2>
+<h2 data-aos="fade-up">Projects</h2>
 
-  <div class="card" data-aos="zoom-in">
-    <img src="images/image1.jpeg" alt="Project Image">
-    <h3>Ecommerce Sales Dashboard</h3>
-    <p>Interactive Power BI dashboard improving forecasting accuracy by 30%.</p>
-    <div class="project-links">
-      <a href="https://github.com/ritiktiwari2004/Sales-Data-Analysis-" target="_blank">GitHub</a>
-    </div>
-  </div>
+<div class="card" data-aos="zoom-in">
+<img src="images/image1.jpeg" style="width:100%;border-radius:10px;margin-bottom:15px;">
+<h3>Ecommerce Sales Dashboard</h3>
+<p>Built an interactive Power BI dashboard to track KPIs and analyze sales trends, improving forecasting accuracy by 30%.</p>
+<p><b>Tools:</b> Power BI, SQL</p>
+<a href="https://github.com/ritiktiwari2004/Sales-Data-Analysis-" target="_blank">GitHub</a>
+</div>
 
-  <div class="card" data-aos="zoom-in" data-aos-delay="200">
-    <img src="images/image2.jpeg" alt="Project Image">
-    <h3>Forest Fire Prediction</h3>
-    <p>Machine learning model with Streamlit deployment and batch predictions.</p>
-    <div class="project-links">
-      <a href="https://github.com/ritiktiwari2004/Forest_fire_prediction_model" target="_blank">GitHub</a>
-    </div>
-  </div>
+<div class="card" data-aos="zoom-in">
+<img src="images/image2.jpeg" style="width:100%;border-radius:10px;margin-bottom:15px;">
+<h3>Forest Fire Prediction System</h3>
+<p>Developed Ridge Regression ML model to predict Fire Weather Index (FWI) using Algerian dataset.</p>
+<ul>
+<li>Applied preprocessing, feature engineering, and scaling</li>
+<li>Built Streamlit app with batch prediction</li>
+<li>Implemented model persistence using joblib</li>
+</ul>
+<p><b>Tools:</b> Python, Pandas, NumPy, Streamlit</p>
+<a href="https://github.com/ritiktiwari2004/Forest_fire_prediction_model" target="_blank">GitHub</a>
+</div>
 
-  <div class="card" data-aos="zoom-in" data-aos-delay="400">
-    <img src="images/image3.jpeg" alt="Project Image">
-    <h3>Housing Price Prediction</h3>
-    <p>RandomForest model with complete ML pipeline.</p>
-    <div class="project-links">
-      <a href="https://github.com/ritiktiwari2004/House-Price-Prediction" target="_blank">GitHub</a>
-    </div>
-  </div>
+<div class="card" data-aos="zoom-in">
+<img src="images/image3.jpeg" style="width:100%;border-radius:10px;margin-bottom:15px;">
+<h3>Housing Price Prediction</h3>
+<p>Developed ML model using RandomForestRegressor on California housing dataset.</p>
+<ul>
+<li>Performed EDA and preprocessing</li>
+<li>Used pipeline with ColumnTransformer</li>
+<li>Applied hyperparameter tuning</li>
+</ul>
+<p><b>Tools:</b> Python, Scikit-learn</p>
+<a href="https://github.com/ritiktiwari2004/House-Price-Prediction" target="_blank">GitHub</a>
+</div>
 
 </section>
 
-<section data-aos="fade-up">
-  <h2>Contact</h2>
-  <p>Email: 03ritik.t@gmail.com</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/ritiktiwari123/">Profile</a></p>
+<section id="certifications" data-aos="fade-up">
+<h2>Certifications</h2>
+<div class="card">
+<p>IBM Data Science 101 Certificate</p>
+<p>IBM Data Science Methodology Certificate</p>
+<p>Tata GenAI Data Analytics Simulation Certificate</p>
+</div>
+</section>
+
+<section id="education" data-aos="fade-up">
+<h2>Education</h2>
+<div class="card">
+<p><b>Bachelor of Technology (CSE)</b></p>
+<p>Accurate Institute of Management and Technology, Greater Noida</p>
+<p>CGPA: 7.4 (till 7th semester)</p>
+<p>Duration: 2022 - 2026</p>
+</div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+<h2>Contact</h2>
+<p>Email: 03ritik.t@gmail.com</p>
+<p><a href="https://www.linkedin.com/in/ritiktiwari123/">LinkedIn</a></p>
+<p><a href="https://github.com/ritiktiwari2004">GitHub</a></p>
 </section>
 
 <footer>
-  <p>© 2026 Ritik Tiwari</p>
+<p>© 2026 Ritik Tiwari</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script>
+AOS.init();
+const text="Data Analyst | Machine Learning Engineer | Problem Solver";
+let i=0;function typing(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(typing,40);}}typing();
+</script>
 
 </body>
 </html>
+
